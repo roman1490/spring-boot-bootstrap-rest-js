@@ -1,0 +1,32 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <div th:fragment="content">
+        <h1>User information-page</h1>
+        <div class="card border-light mb-3">
+            <div class="card-header"><h5>About user</h5></div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td scope="col" id="userId"></td>
+                    <td scope="col" id="userFirstName"></td>
+                    <td scope="col" id="userLastName"></td>
+                    <td scope="col" id="userAge"></td>
+                    <td scope="col" id="userEmail"></td>
+                    <td scope="col" id="userRoles"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

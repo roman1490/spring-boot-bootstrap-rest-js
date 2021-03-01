@@ -1,0 +1,51 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<div th:fragment="content">
+        <form class="font-weight-bold" id="editUserForm">
+        <div class="text-center col-md-6 mx-auto">
+            <div class="form-group">
+                <label th:for="id-edit">ID</label>
+                <input type="number" class="form-control" th:id="id-edit" name="id" readonly>
+            </div>
+
+            <div class="form-group">
+                <label th:for="firstName-edit">First Name</label>
+                <input type="text" name="firstName" class="form-control" th:id="firstName-edit">
+            </div>
+
+            <div class="form-group">
+                <label th:for="lastName-edit">Last Name</label>
+                <input type="text" name="lastName" class="form-control" th:id="lastName-edit">
+            </div>
+
+            <div class="form-group">
+                <label th:for="age-edit">Age</label>
+                <input type="number" name="age" class="form-control" th:id="age-edit">
+            </div>
+
+            <div class="form-group">
+                <label th:for="email-edit">Email</label>
+                <input type="email" name="email" class="form-control" th:id="email-edit">
+            </div>
+
+            <div class="form-group">
+                <label th:for="password-edit">Password</label>
+                <input type="password" name="password" class="form-control" th:id="password-edit">
+            </div>
+
+            <div class="form-group">
+                <label th:for="role-edit">Role</label>
+                <select class="custom-select" name="rolesEditUser" th:id="role-edit" size="2" multiple>
+                    <option th:each="role : ${roles}" th:value="${role.getId()}" th:text="${role.getAuthority()}"
+                    th:class="${role.getAuthority()}"></option>
+                </select>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Edit</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
